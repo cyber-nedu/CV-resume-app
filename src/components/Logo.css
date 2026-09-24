@@ -1,0 +1,180 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-black);
+  text-decoration: none;
+  font-family: Colmeak, serif;
+  line-height: 1;
+  transition:
+    transform var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+.logo-mark {
+  position: relative;
+  width: 52px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 35%, transparent);
+  border-radius: 11px;
+  background: color-mix(in srgb, var(--color-white) 62%, transparent);
+  box-shadow:
+    0 8px 20px color-mix(in srgb, var(--color-black) 10%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--color-white) 90%, transparent),
+    inset 0 -1px 0 color-mix(in srgb, var(--color-primary) 8%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  isolation: isolate;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.logo-mark::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: -10px;
+  width: 42px;
+  height: 24px;
+  background: color-mix(in srgb, var(--color-white) 55%, transparent);
+  border-radius: 50%;
+  filter: blur(8px);
+  transform: rotate(-18deg);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.logo-mark::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border: 1px solid color-mix(in srgb, var(--color-white) 45%, transparent);
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.logo-letter {
+  position: relative;
+  z-index: 2;
+  color: var(--color-black);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo-letter-accent {
+  color: var(--color-primary);
+}
+
+.logo-dot {
+  position: relative;
+  z-index: 2;
+  margin-top: -1px;
+  color: var(--color-primary);
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+.logo:hover .logo-mark {
+  border-color: color-mix(in srgb, var(--color-primary) 60%, transparent);
+  background: color-mix(in srgb, var(--color-white) 72%, transparent);
+  box-shadow:
+    0 10px 24px color-mix(in srgb, var(--color-primary) 16%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--color-white) 95%, transparent),
+    inset 0 -1px 0 color-mix(in srgb, var(--color-primary) 12%, transparent);
+  transform: translateY(-1px);
+}
+
+.logo:active .logo-mark {
+  transform: translateY(0) scale(0.97);
+}
+
+@media (min-width: 480px) {
+  .logo-mark {
+    width: 54px;
+    height: 35px;
+  }
+
+  .logo-letter {
+    font-size: 17px;
+  }
+
+  .logo-dot {
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo-mark {
+    width: 56px;
+    height: 36px;
+    border-radius: 12px;
+  }
+
+  .logo-mark::after {
+    border-radius: 11px;
+  }
+
+  .logo-letter {
+    font-size: 18px;
+  }
+
+  .logo-dot {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo-mark {
+    width: 58px;
+    height: 37px;
+  }
+
+  .logo-letter {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .logo-mark {
+    width: 60px;
+    height: 38px;
+  }
+
+  .logo-letter {
+    font-size: 19px;
+  }
+
+  .logo-dot {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .logo-mark {
+    width: 62px;
+    height: 39px;
+    border-radius: 13px;
+  }
+
+  .logo-mark::after {
+    border-radius: 12px;
+  }
+
+  .logo-letter {
+    font-size: 20px;
+  }
+}
